@@ -16,7 +16,6 @@ public class onDisconnect implements Listener {
         if (e.getPlayer().hasMetadata("DyeManager")) {
             UUID id = e.getPlayer().getUniqueId();
 
-            System.out.println("Removing menu metadata.");
             e.getPlayer().removeMetadata("DyeManager", getPlugin());
             waitingForInput.remove(id);
         }

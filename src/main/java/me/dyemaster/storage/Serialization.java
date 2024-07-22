@@ -33,6 +33,4 @@ public class Serialization {
             section.set("line" + (i + 1), line);
         }
     }
-
-
 }

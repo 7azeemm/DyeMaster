@@ -15,15 +15,7 @@ public class Icon {
         return headType;
     }
 
-    public void setHeadType(Material headType) {
-        this.headType = headType;
-    }
-
     public String getHeadTexture() {
         return headTexture;
-    }
-
-    public void setHeadTexture(String headTexture) {
-        this.headTexture = headTexture;
     }
 }

@@ -35,7 +35,6 @@ public class Menu {
     public Menu(DyeManager manager) {
         this.manager = manager;
         manager.setSwitchingMenus(true);
-        System.out.println("switching is on");
     }
 
     private Inventory inventory;
@@ -45,7 +44,6 @@ public class Menu {
     private int backSlot = -1;
     private ArrayList<String> backItemLore;
     private Fill fill;
-    private Runnable onOpen;
     private boolean cancel = true;
     private boolean extraButtonsRegistered = false;
     private final List<Integer> blackListedSlots = new ArrayList<>();
@@ -98,11 +96,6 @@ public class Menu {
         this.buttons.add(button);
     }
 
-
-    public int getSize() {
-        return size;
-    }
-
     public void setSize(int size) {
         this.size = size;
     }
@@ -123,36 +116,17 @@ public class Menu {
         this.inventory = inventory;
     }
 
-    public Parent getParent() {
-        return parent;
-    }
-
     public void setParent(Parent parent) {
         this.parent = parent;
-    }
-
-    public int getBackSlot() {
-        return backSlot;
     }
 
     public void setBackSlot(int backSlot) {
         this.backSlot = backSlot;
     }
 
-    public Fill getFill() {
-        return fill;
-    }
 
     public void setFill(Fill fill) {
         this.fill = fill;
-    }
-
-    public Runnable getOnOpen() {
-        return onOpen;
-    }
-
-    public void setOnOpen(Runnable onOpen) {
-        this.onOpen = onOpen;
     }
 
     public boolean isCancel() {
@@ -180,10 +154,6 @@ public class Menu {
 
     public List<Integer> getEdgeSlots() {
         return edgeSlots;
-    }
-
-    public void setEdgeSlots(List<Integer> edgeSlots) {
-        this.edgeSlots = edgeSlots;
     }
 
     public int getPage() {
@@ -246,11 +216,8 @@ public class Menu {
         manager.setMenu(this);
         waitingForInput.remove(player.getUniqueId());
 
-        System.out.println("Opening inventory");
         player.openInventory(inventory);
 
-        System.out.println(manager.getAction());
-        System.out.println("switching is off");
         manager.setSwitchingMenus(false);
 
         onOpen(inventory);

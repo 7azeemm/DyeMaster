@@ -1,9 +1,11 @@
 package me.dyemaster.guis.menus;
 
+import me.dyemaster.DyeMaster;
 import me.dyemaster.guis.Button;
 import me.dyemaster.guis.Menu;
 import me.dyemaster.guis.Parameter;
 import me.dyemaster.guis.Parent;
+import me.dyemaster.managers.ConfigManager;
 import me.dyemaster.managers.DyeManager;
 import me.dyemaster.models.Dye;
 import me.dyemaster.models.Settings;
@@ -59,7 +61,6 @@ public class HubMenu extends Menu {
             } else this.setTitle("Dye Master (" + page + "/" + pages + ")");
         }
         this.setSize(6 * 9);
-        //this.setDyeOptions(null);
         this.setPage(page);
 
         addButtons();
@@ -78,8 +79,6 @@ public class HubMenu extends Menu {
                 @Override
                 public ItemStack getItem() {
                     ItemStack item = dye.create();
-//                    saveID(item, dye.getId());
-//                    setId(dye.getId());
                     manager.setDye(dye);
                     return item;
                 }
@@ -248,6 +247,8 @@ public class HubMenu extends Menu {
             this.setSize(6 * 9);
             this.setParent(new Parent(HubMenu.class, new Parameter(DyeManager.class, manager)));
 
+            ConfigManager config = DyeMaster.getConfigManager();
+
             this.addButton(new Button(21) {
                 @Override
                 public ItemStack getItem() {
@@ -272,7 +273,7 @@ public class HubMenu extends Menu {
                     boolean newValue = !getPlugin().getConfig().getBoolean("DyeNameColor");
                     getPlugin().getConfig().set("DyeNameColor", newValue);
                     getPlugin().saveConfig();
-                    getPlugin().setDyeNameColor(newValue);
+                    config.setDyeNameColor(newValue);
 
                     ItemStack item = player.getOpenInventory().getItem(21);
                     ItemMeta meta = item.getItemMeta();
@@ -315,7 +316,7 @@ public class HubMenu extends Menu {
                     boolean newValue = !getPlugin().getConfig().getBoolean("DyeNameColor");
                     getPlugin().getConfig().set("DyeNameColor", newValue);
                     getPlugin().saveConfig();
-                    getPlugin().setDyeNameColor(newValue);
+                    config.setDyeNameColor(newValue);
 
                     ItemStack item = player.getOpenInventory().getItem(30);
                     ItemMeta meta = item.getItemMeta();
@@ -362,7 +363,7 @@ public class HubMenu extends Menu {
                     boolean newValue = !getPlugin().getConfig().getBoolean("ArmorNameColor");
                     getPlugin().getConfig().set("ArmorNameColor", newValue);
                     getPlugin().saveConfig();
-                    getPlugin().setArmorNameColor(newValue);
+                    config.setArmorNameColor(newValue);
 
                     ItemStack item = player.getOpenInventory().getItem(23);
                     ItemMeta meta = item.getItemMeta();
@@ -405,7 +406,7 @@ public class HubMenu extends Menu {
                     boolean newValue = !getPlugin().getConfig().getBoolean("ArmorNameColor");
                     getPlugin().getConfig().set("ArmorNameColor", newValue);
                     getPlugin().saveConfig();
-                    getPlugin().setArmorNameColor(newValue);
+                    config.setArmorNameColor(newValue);
 
                     ItemStack item = player.getOpenInventory().getItem(32);
                     ItemMeta meta = item.getItemMeta();

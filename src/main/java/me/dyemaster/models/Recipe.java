@@ -10,9 +10,6 @@ public class Recipe {
         this.slots = slots;
     }
 
-    public Recipe() {
-    }
-
     public Material[][] getSlots() {
         return slots;
     }

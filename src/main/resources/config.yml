@@ -1,2 +1,5 @@
+#Toggles whether dye name will be colored
 DyeNameColor: true,
+
+#Toggles whether armor name will be colored
 ArmorNameColor: true

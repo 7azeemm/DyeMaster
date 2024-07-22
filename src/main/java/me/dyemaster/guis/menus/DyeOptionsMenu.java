@@ -39,7 +39,6 @@ public class DyeOptionsMenu extends Menu {
         this.setFill(new Fill(Fill.Style.ALL, new int[]{40, 13, 20, 21, 23, 24}));
         this.setBackSlot(40);
         this.setParent(new Parent(HubMenu.class, new Parameter(DyeManager.class, manager)));
-        //this.setUpdateStatus(3);
 
         //info button
         this.addButton(new Button(13) {
@@ -98,9 +97,6 @@ public class DyeOptionsMenu extends Menu {
 
             @Override
             public void onClick(Player player) {
-//                    Settings settings = dye.getSettings().clone();
-//                    setDyeOptions(new CreatingDye(settings));
-//                    setDyeID(dye.getId());
                 try {
                     manager.setSettings(dye.getSettings().clone());
                 } catch (CloneNotSupportedException e) {

@@ -39,7 +39,6 @@ public class onChatMessage implements Listener {
             e.setCancelled(true);
             if (waitingForInput.isEmpty()) e.getHandlers().unregister(this);
             String message = e.getMessage();
-            System.out.println(action);
 
             if (action == DyeManager.Action.SKULL) {
                 PlayerProfile profile = getProfile(message);

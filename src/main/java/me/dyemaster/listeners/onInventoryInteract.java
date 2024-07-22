@@ -29,15 +29,11 @@ public class onInventoryInteract implements Listener {
             DyeManager manager = (DyeManager) player.getMetadata("DyeManager").getFirst().value();
             Menu menu = manager.getMenu();
 
-            System.out.println(player.getOpenInventory().getTitle());
             if (player.getOpenInventory().getTitle().equals(menu.getTitle())) {
-                System.out.println("Clicked " + slot + " in menu " + menu);
 
                 for (final Button button : menu.getButtons()) {
                     if (button.getSlot() == slot) {
                         event.setCancelled(true);
-                        System.out.println("Found clickable slot " + button.getSlot() + " with item " + button.getItem());
-
                         button.onClick(player);
                         return;
                     }
@@ -109,7 +105,6 @@ public class onInventoryInteract implements Listener {
         if (dude.hasMetadata("DyeManager")) {
             DyeManager manager = (DyeManager) dude.getMetadata("DyeManager").getFirst().value();
             if (manager.isSwitchingMenus()) {
-                System.out.println("Switching : true (switched to false)");
                 manager.setSwitchingMenus(false);
                 return;
             }
@@ -117,7 +112,6 @@ public class onInventoryInteract implements Listener {
             if (manager.getAction() != null && manager.getAction() != DyeManager.Action.EDIT && manager.getAction() != DyeManager.Action.CREATE)
                 return;
 
-            System.out.println("Removing menu metadata.");
             dude.removeMetadata("DyeManager", getPlugin());
         }
     }

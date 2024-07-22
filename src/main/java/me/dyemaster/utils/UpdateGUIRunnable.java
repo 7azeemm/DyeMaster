@@ -55,7 +55,5 @@ public class UpdateGUIRunnable extends BukkitRunnable {
         for (int i : secondRow) {
             gui.setItem(i, items[row]);
         }
-
-
     }
 }

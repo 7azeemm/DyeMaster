@@ -92,16 +92,8 @@ public class Dye {
         return id;
     }
 
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
     public UUID getCreator() {
         return creator;
-    }
-
-    public void setCreator(UUID creator) {
-        this.creator = creator;
     }
 
     public Settings getSettings() {
@@ -114,9 +106,5 @@ public class Dye {
 
     public String getCreatedDate() {
         return createdDate;
-    }
-
-    public void setCreatedDate(String createdDate) {
-        this.createdDate = createdDate;
     }
 }

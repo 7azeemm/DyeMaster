@@ -108,7 +108,6 @@ public class CreationMenu extends Menu {
                 }
             });
         }
-        //}
 
         //edit button
         if (manager.getAction() == DyeManager.Action.EDIT) {
@@ -449,7 +448,6 @@ public class CreationMenu extends Menu {
                 public void onClick(Player player) {
                     DyeManager.Action action = manager.getAction();
                     manager.setAction(DyeManager.Action.SKULL);
-                    //dyeBeingCreated.setChatInput(1);
 
                     player.closeInventory();
 
@@ -461,7 +459,7 @@ public class CreationMenu extends Menu {
                 }
             });
 
-            //VanillaIcon
+            //VanillaIcon button
             this.addButton(new Button(21) {
                 @Override
                 public ItemStack getItem() {
