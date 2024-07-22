@@ -4,10 +4,10 @@ public class Fill {
 
     public enum Style {
         ALL,
-        EDGES;
+        EDGES
     }
 
-    private Style style;
+    private final Style style;
     private int[] exceptions;
 
     public Style getStyle() {

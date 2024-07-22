@@ -13,7 +13,7 @@ import static me.dyemaster.utils.ItemChecker.isSign;
 
 public class onPlayerInteract implements Listener {
 
-    private static NamespacedKey namespacedKey = new NamespacedKey(getPlugin(), "custom_id");
+    private static final NamespacedKey namespacedKey = new NamespacedKey(getPlugin(), "custom_id");
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {

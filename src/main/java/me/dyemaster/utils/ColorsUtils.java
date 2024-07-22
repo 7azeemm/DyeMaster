@@ -13,7 +13,7 @@ public class ColorsUtils {
     private static final Pattern HEX_COLOR_PATTERN = Pattern.compile("^#([A-Fa-f0-9]{6})$");
 
     private static final String COLOR_CODE_PATTERN = "&[0-9a-fk-or]";
-    private static final String COLOR_PLACEHOLDER_PATTERN = "(?i)\\[color(?::(#[0-9a-fA-F]{6}))?\\]"; // Case-insensitive pattern for [color] and [color:#RRGGBB]
+    private static final String COLOR_PLACEHOLDER_PATTERN = "(?i)\\[color(?::(#[0-9a-fA-F]{6}))?]"; // Case-insensitive pattern for [color] and [color:#RRGGBB]
 
     public static ArrayList<String> loreProcess(String rawLore, String color) {
         rawLore = color != null ? replaceColorPlaceholders(rawLore, color) : replaceColorPlaceholders(rawLore, null);

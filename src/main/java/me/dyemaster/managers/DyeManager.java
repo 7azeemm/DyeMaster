@@ -73,6 +73,6 @@ public class DyeManager {
         NAME,
         COLOR,
         LORE,
-        SKULL;
+        SKULL
     }
 }

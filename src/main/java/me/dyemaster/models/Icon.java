@@ -3,8 +3,8 @@ package me.dyemaster.models;
 import org.bukkit.Material;
 
 public class Icon {
-    private Material headType;
-    private String headTexture;
+    private final Material headType;
+    private final String headTexture;
 
     public Icon(Material headType, String headTexture) {
         this.headType = headType;
