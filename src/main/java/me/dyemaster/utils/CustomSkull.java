@@ -47,11 +47,11 @@ public class CustomSkull {
         URL urlObject;
         try {
             urlObject = new URL(url);
-        } catch (MalformedURLException __) {
+            textures.setSkin(urlObject); // Set the skin of the player profile to the URL
+            profile.setTextures(textures); // Set the textures back to the profile
+        } catch (MalformedURLException | IllegalArgumentException __) {
             return null;
         }
-        textures.setSkin(urlObject); // Set the skin of the player profile to the URL
-        profile.setTextures(textures); // Set the textures back to the profile
         return profile;
     }
 }
