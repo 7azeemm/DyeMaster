@@ -76,15 +76,16 @@ public class HubMenu extends Menu {
         List<Button> items = new ArrayList<>();
         for (Dye dye : getDyes()) {
             items.add(new Button() {
+
                 @Override
                 public ItemStack getItem() {
                     ItemStack item = dye.create();
-                    manager.setDye(dye);
                     return item;
                 }
 
                 @Override
                 public void onClick(Player player) {
+                    manager.setDye(dye);
                     if (dye == null) {
                         player.sendMessage(ChatColor.RED + "Dye is not found or deleted.");
                         player.closeInventory();
