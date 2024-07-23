@@ -10,11 +10,11 @@ commands:
     permission: dyemaster.gui
 permissions:
   dyemaster.gui:
-    description: allows to run /dyes command to open dyes menu
+    description: allows the user to run /dyes command to open dyes menu.
     default: op
   dyemaster.dyearmor:
-    description: allows player to dye leather armor with custom dye
+    description: allows the user to apply custom dye to armor.
     default: op
   dyemaster.craftdye:
-    description: allows player to craft custom dye
+    description: allows the user to craft custom dye.
     default: op

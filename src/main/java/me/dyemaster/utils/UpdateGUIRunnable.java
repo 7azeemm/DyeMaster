@@ -29,8 +29,6 @@ public class UpdateGUIRunnable extends BukkitRunnable {
         int[] firstRow;
         int[] secondRow;
 
-        System.out.println("1");
-
         if (guiType == 0) {
             firstRow = new int[]{12, 14, 32, 30};
             secondRow = new int[]{13, 23, 31, 21};

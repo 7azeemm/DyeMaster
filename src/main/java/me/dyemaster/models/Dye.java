@@ -1,5 +1,6 @@
 package me.dyemaster.models;
 
+import me.dyemaster.DyeMaster;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -43,7 +44,7 @@ public class Dye {
 
         ItemMeta meta = item.getItemMeta();
 
-        if (getPlugin().isDyeNameColor()) {
+        if (DyeMaster.getConfigManager().isDyeNameColor()) {
             meta.setDisplayName(ChatColor.of(color) + name);
         } else {
             meta.setDisplayName(ChatColor.WHITE + name);

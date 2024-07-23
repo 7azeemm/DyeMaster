@@ -1,5 +1,6 @@
 package me.dyemaster.listeners;
 
+import me.dyemaster.DyeMaster;
 import me.dyemaster.models.Dye;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Color;
@@ -81,7 +82,7 @@ public class onPrepareItemCraft implements Listener {
 
     private static void colorArmor(ItemStack armor, String id, String color) {
         LeatherArmorMeta meta = (LeatherArmorMeta) armor.getItemMeta();
-        if (getPlugin().isArmorNameColor()) {
+        if (DyeMaster.getConfigManager().isArmorNameColor()) {
             if (meta.hasDisplayName()) {
                 meta.setDisplayName(ChatColor.of(color) + ChatColor.stripColor(meta.getDisplayName()));
             } else {
