@@ -52,7 +52,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <outputFile>C:\Users\Hazem\Documents\Server\plugins\DyeMaster-1.0-shaded.jar</outputFile>
+                    <outputFile>C:\Users\Hazem\Documents\Server1.21\plugins\DyeMaster-1.0-shaded.jar</outputFile>
                 </configuration>
             </plugin>
         </plugins>

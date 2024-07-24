@@ -1,8 +1,8 @@
 name: DyeMaster
 version: '${project.version}'
 main: me.dyemaster.DyeMaster
-api-version: '1.20'
-author: 7azeemm
+api-version: '1.21'
+author: 7azem_
 commands:
   dyes:
     description: Opens dye gui
